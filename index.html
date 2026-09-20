@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belén</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="flowers-anim.css">
+</head>
+
+<body>
+
+<!-- FLORES -->
+
+<svg class="flower-defs" aria-hidden="true">
+
+  <symbol id="flor" viewBox="0 0 100 100">
+
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.4"
+      stroke-linecap="round"
+    >
+
+      <path d="M50 50 C50 32, 40 20, 50 8 C60 20, 50 32, 50 50 Z"/>
+      <path d="M50 50 C68 50, 80 40, 92 50 C80 60, 68 50, 50 50 Z"/>
+      <path d="M50 50 C50 68, 60 80, 50 92 C40 80, 50 68, 50 50 Z"/>
+      <path d="M50 50 C32 50, 20 60, 8 50 C20 40, 32 50, 50 50 Z"/>
+      <path d="M50 50 C62 38, 76 38, 84 26 C74 30, 64 38, 50 50 Z"/>
+      <path d="M50 50 C62 62, 76 62, 84 74 C74 70, 64 62, 50 50 Z"/>
+      <path d="M50 50 C38 62, 24 62, 16 74 C26 70, 36 62, 50 50 Z"/>
+      <path d="M50 50 C38 38, 24 38, 16 26 C26 30, 36 38, 50 50 Z"/>
+
+    </g>
+
+    <circle
+      cx="50"
+      cy="50"
+      r="7"
+      fill="currentColor"
+      stroke="none"
+    />
+
+  </symbol>
+
+  <symbol id="tulip" viewBox="0 0 60 140">
+
+    <path
+      d="M30 130 C30 100, 30 80, 30 60"
+      fill="none"
+      stroke="#5a6a3c"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M30 95 C22 92, 12 96, 8 108 C18 108, 26 102, 30 95 Z"
+      fill="#5a6a3c"
+    />
+
+    <g>
+
+      <path
+        d="M30 62 C14 62, 10 40, 18 22 C22 34, 26 44, 30 50 C34 44, 38 34, 42 22 C50 40, 46 62, 30 62 Z"
+        fill="currentColor"
+      />
+
+      <path
+        d="M18 22 C18 34, 24 46, 30 50"
+        fill="none"
+        stroke="rgba(0,0,0,0.12)"
+        stroke-width="1.4"
+      />
+
+      <path
+        d="M42 22 C42 34, 36 46, 30 50"
+        fill="none"
+        stroke="rgba(0,0,0,0.12)"
+        stroke-width="1.4"
+      />
+
+    </g>
+
+  </symbol>
+
+  <symbol id="sunflower" viewBox="0 0 60 140">
+
+    <path
+      d="M30 130 C30 105, 30 90, 30 70"
+      fill="none"
+      stroke="#5a6a3c"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M30 100 C38 96, 48 100, 51 112 C41 111, 34 106, 30 100 Z"
+      fill="#5a6a3c"
+    />
+
+    <g fill="currentColor">
+
+      <ellipse cx="30" cy="40" rx="6" ry="14"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(45 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(90 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(135 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(180 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(225 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(270 30 40)"/>
+      <ellipse cx="30" cy="40" rx="6" ry="14" transform="rotate(315 30 40)"/>
+
+    </g>
+
+    <circle
+      cx="30"
+      cy="40"
+      r="8"
+      fill="#5a4322"
+    />
+
+  </symbol>
+
+  <symbol id="poppy" viewBox="0 0 60 140">
+
+    <path
+      d="M30 130 C30 105, 30 90, 30 70"
+      fill="none"
+      stroke="#5a6a3c"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M30 100 C22 97, 12 100, 8 111 C18 111, 26 106, 30 100 Z"
+      fill="#5a6a3c"
+    />
+
+    <g fill="currentColor">
+      <ellipse cx="30" cy="52" rx="14" ry="17"/>
+      <ellipse cx="30" cy="52" rx="14" ry="17" transform="rotate(90 30 52)"/>
+      <ellipse cx="19" cy="46" rx="12" ry="14" transform="rotate(38 19 46)"/>
+      <ellipse cx="41" cy="46" rx="12" ry="14" transform="rotate(-38 41 46)"/>
+    </g>
+
+    <circle cx="30" cy="50" r="6" fill="#2a1f10"/>
+
+  </symbol>
+
+  <linearGradient id="wrapGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f3ead4"/>
+    <stop offset="100%" stop-color="#c79a3d"/>
+  </linearGradient>
+
+</svg>
+
+
+<!-- SOBRE -->
+
+<div id="envelope-screen" class="envelope-trigger">
+
+  <div class="petals" id="petals"></div>
+
+  <p class="envelope-label">
+    Para Belén
+  </p>
+
+
+  <!-- SOBRE -->
+
+  <button
+    class="envelope-btn"
+    id="open-btn"
+    aria-label="Abrir la carta para Belén"
+  >
+
+    <div class="envelope-art">
+
+      <svg
+        viewBox="0 0 300 200"
+        width="100%"
+        role="presentation"
+      >
+
+        <rect
+          x="6"
+          y="26"
+          width="288"
+          height="168"
+          rx="3"
+          fill="#241f14"
+          stroke="#c79a3d"
+          stroke-width="1.2"
+        />
+
+        <path
+          d="M10 30 L150 130 L290 30"
+          fill="none"
+          stroke="#c79a3d"
+          stroke-width="1.2"
+        />
+
+        <g class="envelope-flap">
+
+          <path
+            d="M6 26 L150 122 L294 26 L294 30 L150 130 L6 30 Z"
+            fill="#2b2417"
+            stroke="#c79a3d"
+            stroke-width="1.2"
+          />
+
+        </g>
+
+        <g class="envelope-seal">
+
+          <circle
+            cx="150"
+            cy="72"
+            r="20"
+            fill="#c79a3d"
+          />
+
+          <use
+            href="#flor"
+            x="132"
+            y="54"
+            width="36"
+            height="36"
+            color="#241f14"
+          />
+
+        </g>
+
+      </svg>
+
+    </div>
+
+  </button>
+
+
+  <p class="envelope-hint">
+    toca el sello para abrir
+  </p>
+
+
+  <!-- REPRODUCTOR -->
+
+  <div class="player" id="player">
+    <div class="player-art">
+      <svg viewBox="0 0 100 100" style="color:#241f14;"><use href="#flor"/></svg>
+    </div>
+    <div class="player-info">
+      <p class="player-title">Twist and Shout</p>
+      <p class="player-artist">The Beatles</p>
+      <div class="player-progress">
+        <span class="player-time player-time-current" id="time-current">0:00</span>
+        <div class="player-bar" id="player-bar">
+          <div class="player-bar-fill" id="player-bar-fill"></div>
+        </div>
+        <span class="player-time" id="time-duration">0:00</span>
+      </div>
+    </div>
+    <button class="player-play" id="player-play" aria-label="Reproducir canción">
+      <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <audio id="audio" src="cancion.mp3" preload="metadata"></audio>
+  </div>
+
+
+  <!-- FLORES -->
+
+  <div
+    class="flower-field"
+    id="flower-field"
+    aria-hidden="true"
+  ></div>
+
+</div>
+
+
+<!-- ===== ESCENA DE FLORES ANIMADAS ===== -->
+<section id="flowers-scene" class="flowers-scene" aria-hidden="true">
+
+  <p class="flowers-caption">
+    Estas flores amarillas son un reflejo de la alegría que traes a mi vida.<br>
+    Gracias por iluminar mis días con tu presencia. (por favor baja)
+  </p>
+
+  <div class="night"></div>
+    <div class="flowers">
+      <div class="flower flower--1">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+          <div class="flower__line__leaf flower__line__leaf--5"></div>
+          <div class="flower__line__leaf flower__line__leaf--6"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--2">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div class="flower flower--3">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d: 1.2s">
+        <div class="flower__g-long">
+          <div class="flower__g-long__top"></div>
+          <div class="flower__g-long__bottom"></div>
+        </div>
+      </div>
+
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--1">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+
+      <div class="growing-grass">
+        <div class="flower__grass flower__grass--2">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d: 2.4s">
+        <div class="flower__g-right flower__g-right--1">
+          <div class="leaf"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d: 2.8s">
+        <div class="flower__g-right flower__g-right--2">
+          <div class="leaf"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d: 2.8s">
+        <div class="flower__g-front">
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div
+            class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8"
+          >
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__line"></div>
+        </div>
+      </div>
+
+      <div class="grow-ans" style="--d: 3.2s">
+        <div class="flower__g-fr">
+          <div class="leaf"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--0">
+        <div class="grow-ans" style="--d: 3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 2.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--1">
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.8s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--2">
+        <div class="grow-ans" style="--d: 4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--3">
+        <div class="grow-ans" style="--d: 4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--4">
+        <div class="grow-ans" style="--d: 4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--5">
+        <div class="grow-ans" style="--d: 4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--6">
+        <div class="grow-ans" style="--d: 4.2s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.4s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.6s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 4.8s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+
+      <div class="long-g long-g--7">
+        <div class="grow-ans" style="--d: 3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.5s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d: 3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+<!-- ===== SEGUNDA CARTA (mensaje) ===== -->
+<div
+  class="envelope-trigger letter-gate"
+  id="letter-gate"
+>
+
+  <p class="envelope-label">
+    ¿Recuerdas que te dije que hubo una tarde en la que me pasé escribiendo?
+
+Entre tantas hojas que fui llenando, hubo un par que tienen tu nombre. Y no fue algo que hubiera planeado, simplemente empecé a escribir y, entre una cosa y otra, terminaste apareciendo ahí.
+
+Hoy quiero enseñártelas. No porque espere algo a cambio ni porque quiera que las tomes de alguna manera en particular, sino porque son cosas que escribí pensando en ti y creo que esta vez prefiero que las leas tú, en lugar de que se queden guardadas entre mis cosas.
+  </p>
+
+  <button
+    class="envelope-btn"
+    id="open-letter-btn"
+    aria-label="Abrir la carta con el mensaje para Belén"
+  >
+
+    <div class="envelope-art">
+
+      <svg
+        viewBox="0 0 300 200"
+        width="100%"
+        role="presentation"
+      >
+
+        <rect
+          x="6"
+          y="26"
+          width="288"
+          height="168"
+          rx="3"
+          fill="#241f14"
+          stroke="#c79a3d"
+          stroke-width="1.2"
+        />
+
+        <path
+          d="M10 30 L150 130 L290 30"
+          fill="none"
+          stroke="#c79a3d"
+          stroke-width="1.2"
+        />
+
+        <g class="envelope-flap">
+
+          <path
+            d="M6 26 L150 122 L294 26 L294 30 L150 130 L6 30 Z"
+            fill="#2b2417"
+            stroke="#c79a3d"
+            stroke-width="1.2"
+          />
+
+        </g>
+
+        <g class="envelope-seal">
+
+          <circle
+            cx="150"
+            cy="72"
+            r="20"
+            fill="#c79a3d"
+          />
+
+          <use
+            href="#flor"
+            x="132"
+            y="54"
+            width="36"
+            height="36"
+            color="#241f14"
+          />
+
+        </g>
+
+      </svg>
+
+    </div>
+
+  </button>
+
+  <p class="envelope-hint">
+    toca el sello para leerla
+  </p>
+
+</div>
+
+
+<section
+  id="letter-wrap"
+  aria-hidden="true"
+>
+
+  <article class="letter">
+
+    <p class="letter-salutation">
+      Belén:
+    </p>
+
+
+    <p>
+      Hay cosas que uno quisiera poder volver atrás y hacer de otra manera. No para cambiar toda la historia, sino para cuidar mejor esos momentos que, por una razón u otra, terminamos perdiendo.
+    </p>
+
+    <p class="short">
+      Y cuando pienso en nosotros, pienso mucho en eso.
+    </p>
+
+    <p>
+      Sé que no hice todo bien. Hubo momentos en los que actué desde la inmadurez, desde el orgullo o simplemente sin pensar en cuánto podían afectarte mis decisiones. And aunque algunas cosas hayan parecido pequeñas desde mi lado, entiendo que para ti pudieron significar mucho más.
+    </p>
+
+    <p>
+      No quiero escribirte para justificarme. Tampoco para convencerte de que olvides lo que pasó.
+    </p>
+
+    <p class="short">
+      Quiero que sepas que lo he pensado.
+    </p>
+
+    <p>
+      He pensado en las veces que pude hacer las cosas mejor, en las veces que quizás necesitabas de mí y no supe estar, y en aquellas cosas que hice que pudieron hacerte dudar de lo que realmente sentía por ti.
+    </p>
+
+    <p class="short">
+      Y si pudiera dejarte una sola certeza, sería esta:
+    </p>
+
+    <p>
+      Entre todas mis confusiones, mis errores y mis malas decisiones, mis sentimientos por ti nunca fueron algo que quisiera reemplazar.
+    </p>
+
+    <p>
+      Tal vez no siempre supe demostrarlo de la manera correcta. Tal vez incluso hice cosas que decían lo contrario. Pero hoy entiendo que querer a alguien no consiste solamente en sentirlo; también consiste en cuidar lo que esa persona siente.
+    </p>
+
+    <p class="short">
+      Y eso es algo que quiero aprender a hacer mejor.
+    </p>
+
+    <p>
+      No quiero pedirte que confíes en mí solamente porque te lo estoy escribiendo aquí. La confianza no se recupera con una carta, ni con unas flores, ni con una promesa bonita. Se recupera poco a poco, con tiempo y con acciones.
+    </p>
+
+    <p class="short">
+      Por eso no quiero apresurarte.
+    </p>
+
+    <p>
+      Sé que tú quieres ir despacio y quiero respetarlo. Si para volver a encontrarnos tenemos que caminar de a pocos, prefiero eso a intentar correr y volver a equivocarnos.
+    </p>
+
+    <p class="short">
+      Porque yo no quiero recuperar simplemente lo que tuvimos.
+    </p>
+
+    <p>
+      Quiero recuperar la posibilidad de hacer las cosas bien esta vez.
+    </p>
+
+
+    <div
+      class="divider"
+      aria-hidden="true"
+    >
+
+      <svg
+        viewBox="0 0 100 100"
+        style="color:var(--gold-dim);"
+      >
+
+        <use href="#flor"/>
+
+      </svg>
+
+    </div>
+
+
+    <p>
+      Y quizás eso sea lo más bonito que puedo ofrecerte: no prometerte una versión perfecta de mí, sino una versión que está dispuesta a reconocer sus errores, aprender de ellos y crecer.
+    </p>
+
+    <p>
+      Hay personas que pasan por nuestra vida y se van dejando recuerdos. Y hay otras que, incluso después de todo, siguen teniendo un lugar al que uno vuelve con el pensamiento.
+    </p>
+
+    <p class="short">
+      Tú eres una de esas personas para mí.
+    </p>
+
+    <p>
+      Como escribió Mario Benedetti, hay encuentros que parecen casualidad, pero terminan convirtiéndose en parte de nuestra historia. Y creo que lo nuestro, con todo lo bonito y también con todo lo difícil, merece al menos la oportunidad de ser recordado por algo más que nuestros errores.
+    </p>
+
+    <p class="short">
+      No sé exactamente qué nos espera.
+    </p>
+
+    <p class="short">
+      Y esta vez no quiero adelantármelo.
+    </p>
+
+    <p>
+      Solo sé que todavía quiero caminar hacia ti, pero sin correr. Quiero demostrarte, con calma, que puedo cuidar mejor aquello que una vez no supe cuidar.
+    </p>
+
+    <p class="short">
+      Estas flores no son una petición.
+    </p>
+
+    <p>
+      Son simplemente una manera de decirte que pensé en ti, que me importas y que, después de todo lo que hemos vivido, todavía me nace tener un detalle contigo.
+    </p>
+
+    <p>
+      Y si algún día volvemos a elegirnos, quisiera que no fuera porque olvidamos lo que pasó, sino porque aprendimos de ello.
+    </p>
+
+
+    <div class="signature">
+
+      <p class="farewell">
+        Con cariño,
+      </p>
+
+      <p class="name">
+        Saúl
+      </p>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer
+  aria-hidden="true"
+>
+
+  <svg
+    class="flower-small"
+    viewBox="0 0 100 100"
+    style="color:var(--gold-dim);"
+  >
+
+    <use href="#flor"/>
+
+  </svg>
+
+  <p class="tag">
+    21 de septiembre — día de las flores amarillas
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
